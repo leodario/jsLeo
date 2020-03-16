@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+       
+       <button class="botao">Clique aqui</button>
+    </div>
+
+    <script>        
+        var botao = document.querySelector(".botao");   
+        var containerElement = document.querySelector("#app");
+       
+        botao.onclick = function(){            
+            var quadrado = document.createElement('div');            
+            containerElement.appendChild(quadrado);
+            quadrado.style.width = '100px';
+            quadrado.style.height = '100px';
+            quadrado.style.marginTop = "5px";
+            quadrado.style.backgroundColor = 'red';
+            quadrado.classList.add("quadrado");  
+            
+            quadrado.onmouseover  = function(){                                      
+                //  mudaCor.style.backgroundColor ='"' + newColor + '"';                
+                quadrado.style.backgroundColor ="blue";             
+            };     
+                           
+        }      
+
+        function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                    return color;
+            } 
+                       
+            var newColor = getRandomColor();
+         console.log = (newColor); // #E943F0   
+
+         
+    </script>
+</body>
+</html>

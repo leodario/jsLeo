@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get('https://api.github.com/users/diego3g')
+            .then(function(response){
+                console.log(response);
+            })
+            .catch(function(error){
+                console.warn(error);
+            });
+    </script>
+</body>
+</html>

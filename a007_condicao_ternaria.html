@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sexo = 'M';
+        
+        var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino';
+        console.log(retorno);      
+
+        window.onload = function(){ 
+            $('#rd-radio_buttons_field-k7dl6mum_Para_a_empresa, #rd-radio_buttons_field-k7dl6mum_Para_eu_mesma').click(function(){     
+                var chkEmpresa = document.getElementById("rd-radio_buttons_field-k7dl6mum_Para_a_empresa");
+                var dvPassport = document.querySelector("#conversion-form > div.bricks-form__fieldset > div:nth-child(9)");
+                var dvPassport2 = document.querySelector("#conversion-form > div.bricks-form__fieldset > div:nth-child(10)");        
+                // dvPassport.style.display = chkEmpresa.checked ? "block" : "none";
+                // dvPassport2.style.display = chkEmpresa.checked ? "block" : "none";
+                if(chkEmpresa.checked == true){
+                    $("#rd-text_field-k7dl6mun, #rd-number_field-k7dl6muo").attr("required", "required");
+                    dvPassport.style.display = "block";
+                    dvPassport2.style.display = "block";
+                } else{
+                    $("#rd-text_field-k7dl6mun, #rd-number_field-k7dl6muo").removeAttr("required");
+                    dvPassport.style.display = "none";
+                    dvPassport2.style.display = "none";
+                }
+            });
+        };
+    </script>
+</body>
+</html>

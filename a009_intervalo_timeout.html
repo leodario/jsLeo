@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function exibeAlgo(){
+            console.log("teste");
+        }
+
+        // quando coloco exibeAlgo() executo somente uma vez a função
+        setInterval(exibeAlgo, 1000);
+
+        function timeOut(){
+            console.log("exibindo esperando tempo");            
+        }
+
+        // aguarda 5 segundos para executar uma vez a ação
+        setTimeout(timeOut, 5000);
+    </script>
+</body>
+</html>

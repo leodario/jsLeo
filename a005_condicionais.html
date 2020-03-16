@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function retornaSexo(sexo){
+            switch(sexo){
+                case 'M': 
+                    return "Masculino";
+                case 'F':
+                    return "Feminino";
+                default:
+                    return 'Outro';    
+            }
+        }
+
+        var retornaSexo = retornaSexo('M');
+        var retornaSexo2 = retornaSexo('fsfhdkfhsd');
+        console.log(retornaSexo);
+        console.log(retornaSexo2);
+    </script>
+</body>
+</html>

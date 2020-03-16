@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+<script>       
+    function pares(x,y){
+        if(x / 2 = 0 && y)
+    }
+    pares(32, 321);
+
+    
+window.onload = function(){ 
+    var fonteRecebedora = document.getElementById('rd-text_field-k7etsugf');
+    fonteRecebedora.value = "Brands";
+    $('#rd-text_field-k7etsugf').attr("disabled", true);
+    $('#rd-radio_buttons_field-k7etsugc_Para_eu_mesma, #rd-radio_buttons_field-k7etsugc_Para_a_empresa').click(function(){     
+        var chkEmpresa = document.getElementById("rd-radio_buttons_field-k7etsugc_Para_a_empresa");
+        var dvPassport = document.querySelector("#conversion-form > div.bricks-form__fieldset > div:nth-child(12)");
+        var dvPassport2 = document.querySelector("#conversion-form > div.bricks-form__fieldset > div:nth-child(13)");        
+        // dvPassport.style.display = chkEmpresa.checked ? "block" : "none";
+        // dvPassport2.style.display = chkEmpresa.checked ? "block" : "none";
+        if(chkEmpresa.checked == true){
+            $("#rd-text_field-k7eswam9, #rd-number_field-k7eswama").attr("required", "required");
+            dvPassport.style.display = "block";
+            dvPassport2.style.display = "block";
+        } else{
+            $("#rd-text_field-k7eswam9, #rd-number_field-k7eswama").removeAttr("required");
+            dvPassport.style.display = "none";
+            dvPassport2.style.display = "none";
+        }
+    });
+            
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+       <div class="box"></div>
+       <button class="botao">Clique aqui</button>
+    </div>
+
+    <script>        
+        
+        var botao = document.querySelector(".botao");
+        
+
+        botao.onclick = function(){
+            var quadrado = document.createElement('div');
+            var containerElement = document.querySelector("#app");
+            containerElement.appendChild(quadrado);
+            quadrado.style.width = '100px';
+            quadrado.style.height = '100px';
+            quadrado.style.marginTop = "5px";
+            quadrado.style.backgroundColor = 'red';
+        }
+
+        var endImagem = 'https://www.5sgrupo.com.br/wp-content/uploads/2020/03/Encante-definitivamente-o-seu-cliente.png';
+        var imagem = document.createElement('img');
+        imagem.setAttribute('src',endImagem);        
+        document.querySelector('#rd-section-jsdbj8lx').insertAdjacentElement('afterbegin',imagem).classList.add("imagem-top");
+
+        var endImagem2 = 'https://www.5sgrupo.com.br//wp-content/uploads/2020/03/realização.png';
+        var imagem2 = document.createElement('img');
+        imagem2.setAttribute('src',endImagem2);        
+        document.querySelector('#rd-section-jsdbj8lx').insertAdjacentElement('beforeend',imagem2).classList.add("imagem-rodape");
+
+
+       
+    </script>
+</body>
+</html>

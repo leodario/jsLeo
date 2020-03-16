@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .hidden {display: none;}  
+    </style>
+</head>
+<body>
+    <input type="text" name="user">
+    <button onclick="buscar()">Adicionar</button>
+    <ul class="lista">
+        <li id="hidden" class="hidden">Carregando...</li>
+    </ul>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        var ul = document.querySelector('.lista');
+        var carregando = document.querySelector('#hidden');
+        function buscar(){
+            var li = document.createElement('li');  
+            var nome = document.querySelector("input").value;   
+            var texto = document.createTextNode(nome);         
+            carregando.classList.remove('hidden');  
+            li.appendChild(texto);
+            ul.appendChild(li);
+            var lista = `https://api.github.com/users/${nome}/repos`;
+            console.log(lista);
+            axios.get(lista)            
+                .then(function() {
+                    console.log("Nome encontrado");
+                })
+                .catch(function() {
+                    console.log("Nome não encontrado");
+                })
+                .then(function(){
+                    carregando.classList.add('hidden');
+                })
+
+        }       
+        
+    </script>
+</body>
+</html>
